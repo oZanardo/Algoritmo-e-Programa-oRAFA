@@ -6,6 +6,17 @@ public class Exercicios {
     private String Enunciado;
     List<Integer> Numbers = new ArrayList<>();
 
+    //Construtores
+    Exercicios(String enunciado){
+        Enunciado = enunciado;
+    }
+
+    //get and Setters
+    String getEnunciado(){
+        return Enunciado;
+    }
+
+    //Métodos
     String parImpar(int input){
         if (input % 2 == 0){
             return "O Valor é par";
