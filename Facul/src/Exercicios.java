@@ -13,5 +13,11 @@ public class Exercicios {
         else return "Valor é Impar";
     }
 
+    String maiorDois(int a, int b){
+        if(a>b) return a + " é maior que " + b
+          else if
+}
+
+
 
 }
