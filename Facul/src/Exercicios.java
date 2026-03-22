@@ -14,8 +14,9 @@ public class Exercicios {
     }
 
     String maiorDois(int a, int b){
-        if(a>b) return a + " é maior que " + b
-          else if
+        if(a>b) return a + " é maior que " + b;
+          else if(b<a) return b + " é maior que " + a;
+              else return "os dois valores são esquivalentes";
 }
 
 
