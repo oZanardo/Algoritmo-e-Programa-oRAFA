@@ -6,14 +6,14 @@ public class Main {
         //var
         Scanner sc = new Scanner(System.in);
         int temp;
-        int input;
+        int input,inputB;
 
         //lista exercicios
 
             List<Exercicios> listExercicios = new ArrayList<>();
             listExercicios.add(new Exercicios("Leia um número inteiro e mostre PAR ou ÍMPAR."));
             listExercicios.add(new Exercicios("Leia dois inteiros e mostre o maior (ou “Iguais”)"));
-            listExercicios.add(new Exercicios("Mostre: \n" + "\n" + "1- Somar\n" + "2- Subtrair\n" + "3- Multiplicar\n" + "4- Dividir\n" + "Leia a opção e dois números.\n" + "⚠\uFE0F Trate divisão por zero."));
+            listExercicios.add(new Exercicios("Mostre: \n" + "\n" + "1- Somar\n" + "2- Subtrair\n" + "3- Multiplicar\n" + "4- Dividir\n" + "Digite a opcao"));
             listExercicios.add(new Exercicios("Leia uma nota entre 0 e 100. Enquanto inválida, pedir novamente"));
             listExercicios.add(new Exercicios("Leia números até digitar 0 (0 não entra na conta).\n" + "Mostre maior e menor digitado"));
             listExercicios.add(new Exercicios("Saldo inicial: R$ 1000,00\n" + "Menu: 1- Depositar \n" + "2- Sacar \n" + "3- Ver saldo \n" + "4- Sair "));
@@ -37,14 +37,22 @@ public class Main {
             case 1:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
                 input = sc.nextInt();
-                listExercicios.get(temp-1).setNumbers(input);
-                System.out.println(listExercicios.get(temp-1).parImpar(listExercicios.get(temp-1).getInputs(0)));
+                System.out.println(listExercicios.get(temp-1).parImpar(input));
                 break;
             case 2:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                input = sc.nextInt();
+                inputB = sc.nextInt();
+                System.out.println(listExercicios.get(temp-1).maiorDois(input,inputB));
             break;
             case 3:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                temp = sc.nextInt();
+                System.out.print("Digite o primeiro numero da conta : ");
+                input =  sc.nextInt();
+                System.out.print("Digite o segundo numero da conta : ");
+                inputB = sc.nextInt();
+                System.out.println(listExercicios.get(temp-1).grossCalculator(input,inputB,temp));
                 break;
             case 4:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());

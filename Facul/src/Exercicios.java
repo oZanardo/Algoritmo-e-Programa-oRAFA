@@ -37,6 +37,20 @@ public class Exercicios {
               else return "os dois valores são esquivalentes";
 }
 
+    double grossCalculator(int a, int b, int temp){
+        int x;
+        switch (temp){
+            case 1: x = a + b; break;
+            case 2: x = a - b; break;
+            case 3: x = a * b; break;
+            case 4: x = a / b; break;
+            default: x = 0; break;
+        }
+        return x;
+    }
+
+
+
 
 
 
