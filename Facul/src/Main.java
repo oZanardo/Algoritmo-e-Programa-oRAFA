@@ -6,6 +6,7 @@ public class Main {
         //var
         Scanner sc = new Scanner(System.in);
         int temp;
+        int input;
 
         //lista exercicios
 
@@ -25,8 +26,8 @@ public class Main {
         //Menu de exercicios
         System.out.print("Selecione o exercicio desejado : \n1. Par ou impar\n2.Maior de dois\n3.Calculadora com menu\n" +
                 "4. Validação de Dados\n5. Sentinela(parada no 0)\n6.Simulador de caixa\n7. Desconto por categoria\n8.Contagem de valores \n" +
-                "9. Soma de 1 até N\n10.Contagem regressiva e soma");
-        System.out.println();
+                "9. Soma de 1 até N\n10.Contagem regressiva e soma\n");
+
         temp = sc.nextInt();
 
 
@@ -35,7 +36,10 @@ public class Main {
         switch (temp) {
             case 1:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
-            break;
+                input = sc.nextInt();
+                listExercicios.get(temp-1).setNumbers(input);
+                System.out.println(listExercicios.get(temp-1).parImpar(listExercicios.get(temp-1).getInputs(0)));
+                break;
             case 2:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
             break;

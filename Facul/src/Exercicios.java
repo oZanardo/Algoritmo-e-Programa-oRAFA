@@ -4,7 +4,7 @@ import java.util.List;
 public class Exercicios {
 
     private String Enunciado;
-    List<Integer> Numbers = new ArrayList<>();
+    private List<Integer> Numbers = new ArrayList<>();
 
     //Construtores
     Exercicios(String enunciado){
@@ -14,6 +14,13 @@ public class Exercicios {
     //get and Setters
     String getEnunciado(){
         return Enunciado;
+    }
+    void setNumbers(int input){
+        Numbers.add(input);
+    }
+
+    Integer getInputs(int i){
+        return Numbers.get(i);
     }
 
     //Métodos
@@ -29,6 +36,7 @@ public class Exercicios {
           else if(b<a) return b + " é maior que " + a;
               else return "os dois valores são esquivalentes";
 }
+
 
 
 
