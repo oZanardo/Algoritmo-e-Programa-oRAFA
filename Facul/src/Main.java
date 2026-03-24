@@ -8,6 +8,7 @@ public class Main {
         int temp;
         int input,inputB;
 
+
         //lista exercicios
 
             List<Exercicios> listExercicios = new ArrayList<>();
@@ -56,9 +57,15 @@ public class Main {
                 break;
             case 4:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                int a=0;
+                while(a<0||a>100){
+                    System.out.print("Digite um numero valido: ");
+                }
+                System.out.println("O numero valido foi : "+a);
                 break;
             case 5:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+
                 break;
             case 6:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
