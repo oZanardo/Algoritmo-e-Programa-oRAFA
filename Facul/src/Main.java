@@ -7,7 +7,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int temp;
         int input,inputB;
-
+        double valor, valorFinal;
+        input = -1;
 
         //lista exercicios
 
@@ -57,27 +58,92 @@ public class Main {
                 break;
             case 4:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
-                int a=0;
-                while(a<0||a>100){
+                while(input<0||input>100){
                     System.out.print("Digite um numero valido: ");
+                    input = sc.nextInt();
                 }
-                System.out.println("O numero valido foi : "+a);
+                System.out.println("O numero valido foi : "+input);
                 break;
             case 5:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
-
+                input = sc.nextInt();
+                while (input != 0){
+                    System.out.println("Digite um numero : ");
+                    input = sc.nextInt();
+                    if(input > 0)System.out.println("Numero maior que 0");
+                    else System.out.println("Numero menor que 0");
+                }
                 break;
             case 6:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                    while (temp != 4){
+                System.out.print("Menu:\n1.Depositar\n2.Sacar\n3.Ver Saldo\n4.Sair");
+                temp = sc.nextInt();
+                switch (temp) {
+                    case 1:
+                        System.out.print("Valor do deposito: ");
+                        input = sc.nextInt();
+                        listExercicios.get(temp-1).deposito(input);
+                        break;
+                    case 2:
+                        System.out.print("Valor do saque: ");
+                        input = sc.nextInt();
+                        if (input < listExercicios.get(temp-1).getSaldo()) {
+                            System.out.println("Valor indisponivel para saque");
+                        } else {listExercicios.get(temp-1).saque(input);}
+                        break;
+                    case 3:
+                        System.out.println("Seu saldo atual : "+listExercicios.get(temp-1).getSaldo());
+                        break;
+                    case 4: break;
+                    default:
+                        System.out.println("Opcao invalida");
+                    break;
+                }//Ia mostrar sempre o saldo dps que o cliente fizesse uma operacao, porem nao era o que estava no exercicio
+                }
                 break;
             case 7:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                System.out.print("Valor da compra : ");
+                valor = sc.nextDouble();
+                System.out.println("Categoria do cliente : ");
+                temp = sc.nextInt();
+                switch (temp) {
+                    case 1: input = 5;
+                    valorFinal = listExercicios.get(temp-1).valorCompra(valor,input);
+                        System.out.println("O valor final sera R$"+(valorFinal-valor)+"\n e o desconto foi de R$"+ valorFinal);
+                        break;
+                    case 2: input = 10;
+                        valorFinal = listExercicios.get(temp-1).valorCompra(valor,input);
+                        System.out.println("O valor final sera R$"+(valorFinal-valor)+"\n e o desconto foi de R$"+ valorFinal);
+                        break;
+                    case 3: input = 15;
+                        valorFinal = listExercicios.get(temp-1).valorCompra(valor,input);
+                        System.out.println("O valor final sera R$"+(valorFinal-valor)+"\n e o desconto foi de R$"+ valorFinal);
+                        break;
+                    default: System.out.println("Categoria invalida, reinicie o programa");
+                }
                 break;
             case 8:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                int zeros=0;
+                int positivos=0;
+                int negativos=0;
+                for (int i = 0; i<10; i++) {
+                    System.out.print("Digite um numero : ");
+                    input = sc.nextInt();
+                    if (input == 0) zeros++;
+                    else if (input > 0) positivos++;
+                    else negativos++;
+                }
+                System.out.printf("No total foram % positivos, %d negativos, %d zeros\n ", positivos, negativos, zeros);
                 break;
             case 9:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                input = sc.nextInt();
+                for (int i = 0; i < input; i++) {
+
+                }
                 break;
             case 10:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());

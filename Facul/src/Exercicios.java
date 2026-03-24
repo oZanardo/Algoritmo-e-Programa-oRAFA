@@ -49,10 +49,26 @@ public class Exercicios {
         return x;
     }
 
+    //Banco!!!
+    private double Saldo = 1000.00;
+    double deposito(int add){
+        return Saldo + add;
+    }
+    double saque(int sub){
+        return Saldo - sub;
+    }
 
+    double getSaldo() {
+        return Saldo;
+    }
 
+    double valorCompra(double valor, int input){
+        return (valor*input)/100;
+    }
 
-
+    double descontoCompra(double valor, int input){
+        return ((valor*input)/100)- valor;
+    }
 
 
 
