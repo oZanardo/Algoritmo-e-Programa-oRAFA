@@ -141,24 +141,22 @@ public class Main {
             case 9:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
                 input = sc.nextInt();
-                for (int i = 0; i < input; i++) {
-
+                for (int i = 1; i < input; i++) {
+                    System.out.println("Contando " + i);
                 }
                 break;
             case 10:
                 System.out.println(listExercicios.get(temp-1).getEnunciado());
+                int soma = 0;
+                input = sc.nextInt();
+                for(int i = input; i > 0; i--){
+                    soma =+ i;
+                }
                 break;
     default:
         System.out.println("Opção não disponivel!");
                 break;
         }
-
-
-
-
-
     }
-
-
 }
 
