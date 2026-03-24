@@ -4,7 +4,6 @@ import java.util.List;
 public class Exercicios {
 
     private String Enunciado;
-    private List<Integer> Numbers = new ArrayList<>();
 
     //Construtores
     Exercicios(String enunciado){
@@ -15,13 +14,7 @@ public class Exercicios {
     String getEnunciado(){
         return Enunciado;
     }
-    void setNumbers(int input){
-        Numbers.add(input);
-    }
 
-    Integer getInputs(int i){
-        return Numbers.get(i);
-    }
 
     //Métodos
     String parImpar(int input){
